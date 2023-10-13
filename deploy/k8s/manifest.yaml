@@ -118,7 +118,7 @@ spec:
     spec:
       containers:
         - name: webdav-server
-          image: harbor.k8s.lan/dockerhub-proxy/ugeek/webdav:amd64
+          image: harbor.k8s.lan/proxy-cache-dockerhub/ugeek/webdav:amd64
           ports:
             - name: http
               containerPort: 80
