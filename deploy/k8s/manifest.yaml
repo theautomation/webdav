@@ -25,7 +25,7 @@ spec:
     fsType: nfs
     volumeHandle: pvc-nfs-webdav-server-data
     volumeAttributes:
-      server: storage-server-lagg.lan
+      server: storage-server-lagg.lan.theautomation.nl
       share: /mnt/r10_8tb/shared
       node_attach_driver: nfs
       provisioner_driver: node-manual
@@ -118,7 +118,7 @@ spec:
     spec:
       containers:
         - name: webdav-server
-          image: harbor.k8s.lan/proxy-cache-dockerhub/ugeek/webdav:amd64
+          image: harbor.lan.theautomation.nl/proxy-cache-dockerhub/ugeek/webdav:amd64
           ports:
             - name: http
               containerPort: 80
@@ -180,7 +180,7 @@ metadata:
 spec:
   ingressClassName: nginx-private
   rules:
-    - host: "webdav.k8s.lan"
+    - host: "webdav.lan.theautomation.nl"
       http:
         paths:
           - path: "/"
